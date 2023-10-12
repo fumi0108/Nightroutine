@@ -1,0 +1,40 @@
+<div class="mina">
+  <h1>みんなのナイトルーティン</h1>
+    <div class="mina1">
+        一覧ページ
+        <%= link_to "新規投稿へ", new_star_path %>
+        <% if user_signed_in? %>
+          <%= link_to "マイページへ", user_path(current_user.id) %>
+        <% end %>
+    </div> 
+</div>
+
+<div class="stars-container">
+  <% @stars.each do |t| %>
+    
+    <div class="toukou">
+    <%= image_tag t.image_url, size: "250x200" if t.user.image? %>
+      <%= t.user.email %>
+      <%= t.osusume %>
+      <%= t.sakerubeki %>
+      <%= image_tag t.image_url, size: "250x200" if t.image? %>
+      <% if user_signed_in? %>
+      <% if current_user.already_played?(t) %>
+          <%= button_to star_play_path(id: t.id, star_id: t.id), method: :delete do %>
+            <i class="fas fa-heart"></i><%= t.plays.count %>
+          <% end %>
+      <% else %>
+          <%= button_to star_plays_path(id: t.id, star_id: t.id), method: :post do %>
+            <i class="far fa-heart"></i><%= t.plays.count %>
+          <% end %>
+      <% end %>f
+  <% else %>
+  <i class="far fa-heart"></i><%= t.plays.count %>
+  <% end %>
+  <% if user_signed_in? && current_user.id == t.user_id %>
+  <%= link_to "編集する", edit_star_path(t.id) %>
+  <%= button_to "削除する", star_path(t.id), method: :delete %>
+<% end %> 
+    
+  <% end %> 
+</div>

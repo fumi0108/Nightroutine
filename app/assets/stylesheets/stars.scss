@@ -1,0 +1,88 @@
+// Place all the styles related to the stars controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* topページ*/
+
+.topimage{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.topimg{
+    max-width: 100%;
+    height: 120%;
+    position: absolute;
+}
+
+.about{
+    margin: 30px;
+}
+.about h1{
+    text-align: center;
+}
+
+.about1{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+}
+
+.about-text{
+    width: 50%;
+}
+
+.about-image{
+    width: 50%;
+}
+
+.about-img{
+    max-width: 100%;
+    height: 400px;
+}
+HTML CSSResult Skip Results Iframe
+EDIT ON
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background: #3f98ef;
+  opacity: 0.6;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #130000;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+.mina{
+    text-align: center;
+}
+.mina1{
+   
+}
+   
+  .toukou{
+    width: 50%;
+  }

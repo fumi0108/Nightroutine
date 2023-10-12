@@ -1,0 +1,7 @@
+<%= form_for @star do |f| %>
+    <%= f.label :おすすめ %>
+    <%= f.text_field :osusume, :size => 140 %> 
+    <%= f.label :避けるべきもの %>
+    <%= f.text_field :sakerubeki, :size => 140 %> 
+    <%= f.submit "編集する" %>
+  <% end %>

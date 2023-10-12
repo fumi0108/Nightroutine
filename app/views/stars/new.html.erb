@@ -1,0 +1,22 @@
+<h1>Fumiup</h1>
+<h3>新規投稿ページ</h3>
+<%= form_for @Star do |f| %>
+    <div class="field">
+        <%= f.label :おすすめ  %>
+        <%= f.text_area :osusume, :size => 30 %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :避けるべき  %>
+        <%= f.text_area :sakerubeki, :size => "30x2" %>
+    </div>
+
+    <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+    </div>
+
+    <%= f.submit "投稿する" %>
+<% end %>
+
+<%= link_to "一覧に戻る", stars_path %>

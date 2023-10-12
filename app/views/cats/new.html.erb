@@ -1,0 +1,83 @@
+
+    <%= form_for(@cat, class: 'form-horizontal', role: 'form') do |f| %>
+        <div class="container-sindan">
+            <div class="row">
+                <div class="sinndannmei">
+                    <p>
+                        "今のあなたに"
+                        <br>
+                        "ぴったりのナイトルーティンを診断"
+                    </p>
+                </div>    
+
+            <div class="question">
+                <div class="question1">
+                    <h2 class="q1">
+                         Q1
+                    </h2>
+                    <p>
+                        眠れないのはなぜ？
+                    </p>
+                    <div class="img-container">
+                        <img src="./static/img/quiz/Q1.png" alt="画像" class="img-container__img">
+                    </div>
+                    <div class="col-6">
+                        <p>
+                            <%= f.check_box :question, {multiple: true}, "1", nil %>疲れてないから
+                        </p>
+                        <div class="control__indicator">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <p>
+                            <%= f.check_box :question, {multiple: true}, "2", nil %>ハイテンションだから
+                        </p>
+                    <div class="control__indicator">
+                    </div>
+                
+                <div class="question1">
+                    <h2 class="q1">
+                        Q2
+                    </h2>
+                    <p>
+                        眠りたい時どんな気持ちになりたい？
+                    </p>
+                    <div class="img-container">
+                    <img src="./static/img/quiz/Q1.png" alt="画像" class="img-container__img">
+                    </div>
+                    <div class="col-6">
+                    <p>
+                        <%= f.check_box :question, {multiple: true}, "1", nil %>幸せな気持ち
+                    </p>
+                    </div>
+                    <div class="col-6">
+                    <p>
+                        <%= f.check_box :question, {multiple: true}, "2", nil %>何も考えずに、落ち着いた気持ち
+                    </p>
+                </div>
+                
+                <div class="question1">
+                    <h2 class="q1">
+                        Q3
+                    </h2>
+                    <p>
+                        眠れないときにしたいことは何？
+                    </p>
+                    <div class="img-container">
+                    <img src="./static/img/quiz/Q1.png" alt="画像" class="img-container__img">
+                    </div>
+                    <div class="col-6">
+                    <p>
+                    <%= f.check_box :question, {multiple: true}, "1", nil %>身体を動かす
+                    </p>
+                    </div>
+                    <div class="col-6">
+                    <p><%= f.check_box :question, {multiple: true}, "2", nil %>リラックスしたい</p>
+                </div>
+                </div>    
+                    <div class="keka">
+                    <a onclick="$(this).closest('form').submit();" href="javascript:void(0);">結果を見る→</a>
+                </div>
+        </div>
+       
+<% end %>
